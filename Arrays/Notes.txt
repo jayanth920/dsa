@@ -1,0 +1,1 @@
+1. Can exchange array elements using this for Python matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]. For JS [matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]]
