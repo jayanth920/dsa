@@ -11,5 +11,5 @@ class Solution:
         for i in range(len(matrix)):
             matrix[i].reverse()
 
-#make sure to add () in .reverse() method
+# make sure to add () in .reverse() method
 # use matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
