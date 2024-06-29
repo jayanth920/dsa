@@ -1,0 +1,5 @@
+Do Dutch national flag algo.
+Heap sort
+Merge sort
+Quick sort
+Insertion sort
