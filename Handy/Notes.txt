@@ -3,3 +3,5 @@ Heap sort
 Merge sort
 Quick sort
 Insertion sort
+Counting Sort 
+Sieve
