@@ -1,40 +1,13 @@
-// // O(min(n1,n2)) - Brute Force
-// function gcdandlcm(n1,n2){
-//     let gcd = 1;
-//     let lcm = 0
-//     let sm;
-//     if(n1 < n2){
-//         sm = n1
-//     } else {
-//         sm = n2
-//     }
-//     for(let i=1; i<=sm; i++){
-//         if(n1%i == 0 && n2%i == 0){
-//             gcd = i
-//         }
-//     }
-
-//     lcm = (n1 * n2)/gcd
-//     return {
-//         gcd,
-//         lcm
-//     }
-// }
-
-// console.log(gcdandlcm(10,5))
-
-//Optimal approach using Eucledian Algorithm
-//https://takeuforward.org/data-structure/find-gcd-of-two-numbers/
-
-function gcd(n1, n2) {
-  if (n2 === 0) {
-    console.log("Returning n1")
-    return n1;
+function bubbleSort(arr){
+  let n = arr.length
+  for(i=0;i<n-1;++i){
+    for(j=0;j<n-i-1;++j){
+      if(arr[j] > arr[j+1]){
+        [arr[j],arr[j+1]]=[arr[j+1],arr[j]]
+      }
+    }
   }
-  let sm = Math.min(n1, n2);
-  let bg = Math.max(n1, n2);
-  console.log(`gcd(${sm},${bg%sm})`);
-  return gcd(sm, bg % sm);
+  return arr
 }
 
-console.log(gcd(20, 15));
+console.log(bubbleSort([8,3,4,6,1,5,12,99,43,13,65]))

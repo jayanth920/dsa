@@ -4,4 +4,10 @@ Merge sort
 Quick sort
 Insertion sort
 Counting Sort 
-Sieve
+Sieve of erastosthenes
+Kadanes algo
+radix sort
+bucket sort
+Boyer-Moore vote algorithm
+
+
