@@ -13,5 +13,6 @@ def majorityElement(nums):
             v = my[nums[i]]
             k = nums[i]
     return k
+
         
 print(majorityElement([2,2,1,1,1,2,2]))
