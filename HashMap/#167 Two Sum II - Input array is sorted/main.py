@@ -35,7 +35,5 @@ def solve(nums, target):
         else:
             return [x,y]
     return []
-            
-    
     
 print(solve([2,7,11,15,20],26))
