@@ -5,7 +5,6 @@ def solve(nums):
             reachmaxxing = max(reachmaxxing, i+nums[i])
             if reachmaxxing >= len(nums)-1:
                 return True
-        
     return False
             
     

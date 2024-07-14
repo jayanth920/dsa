@@ -8,7 +8,6 @@ def merge(nums1,m,nums2,n):
     p = m+n-1
     
     while p1>=0 and p2>=0:
-        print()
         if nums2[p2] > nums1[p1]:
             nums1[p] = nums2[p2]
             p2 -= 1
