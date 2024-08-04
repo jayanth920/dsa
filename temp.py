@@ -67,33 +67,50 @@
 # print(solve([1, 2, 3, 4, 5]))
 # print(solve([3, 2, 1, 0, 4]))
     
-def solve(haystack,needle):
-    if not needle:
-        return 0
-    if not haystack:
-        return -1
+# def solve(haystack,needle):
+#     if not needle:
+#         return 0
+#     if not haystack:
+#         return -1
     
-    counter = 0
-    initial = -1
-    for i in range(len(haystack)):
-        if haystack[i] == needle[counter]:
-            if counter == 0:
-                initial = i
-            counter += 1
-            if counter == len(needle):
-                return initial
-        else:
-            if counter > 0:
-                i = initial
-            counter = 0
-            initial = -1
-        i+=1
-    return -1
+#     counter = 0
+#     initial = -1
+#     for i in range(len(haystack)):
+#         if haystack[i] == needle[counter]:
+#             if counter == 0:
+#                 initial = i
+#             counter += 1
+#             if counter == len(needle):
+#                 return initial
+#         else:
+#             if counter > 0:
+#                 i = initial
+#             counter = 0
+#             initial = -1
+#         i+=1
+#     return -1
 
-hay = "leetcode"
-need = "leet"
-hay1 = "mississippi"
-need1 = "issip"
-# print(solve(hay, need))  # Output: 0
-print(solve(hay1, need1))  # Output: 4
+# hay = "leetcode"
+# need = "leet"
+# hay1 = "mississippi"
+# need1 = "issip"
+# # print(solve(hay, need))  # Output: 0
+# print(solve(hay1, need1))  # Output: 4
 
+
+def solve(s):
+        ans = ""
+        res = []
+        for i in range(len(s)):
+            if s[i] != " ":
+                ans+= s[i]
+                if i+1 != len(s) and  s[i+1] == " ":
+                    print(i)
+                    res.append(ans)
+                    ans = "" 
+                elif i == len(s)-1:
+                    res.append(ans)
+        return res
+
+print(solve("   fly me   to   the moon  "))
+print(solve("Hello World"))
