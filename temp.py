@@ -6,7 +6,7 @@
 #             if reachmaxxing >= len(nums)-1:
 #                 return True
 #     return False
-    
+
 
 # def solve(nums):
 #     reachmaxxing = len(nums)-1
@@ -21,7 +21,7 @@
 
 # def findPlatform(arrival, departure):
 #     n = len(arrival)
-    
+
 #     # Initialize the first departure as max_time
 #     max_time = departure[0]
 #     c = 1  # Platform counter
@@ -40,7 +40,7 @@
 #             if arrival[i + 1] > max_time:
 #                 max_time = departure[i + 1]
 #                 c -= 1
-    
+
 #     return c
 
 # # Test case
@@ -66,13 +66,13 @@
 # print(solve([2,3,1,1,4]))
 # print(solve([1, 2, 3, 4, 5]))
 # print(solve([3, 2, 1, 0, 4]))
-    
+
 # def solve(haystack,needle):
 #     if not needle:
 #         return 0
 #     if not haystack:
 #         return -1
-    
+
 #     counter = 0
 #     initial = -1
 #     for i in range(len(haystack)):
@@ -98,19 +98,197 @@
 # print(solve(hay1, need1))  # Output: 4
 
 
-def solve(s):
-        ans = ""
-        res = []
-        for i in range(len(s)):
-            if s[i] != " ":
-                ans+= s[i]
-                if i+1 != len(s) and  s[i+1] == " ":
-                    print(i)
-                    res.append(ans)
-                    ans = "" 
-                elif i == len(s)-1:
-                    res.append(ans)
-        return res
+# def solve(s):
+#         ans = ""
+#         res = []
+#         for i in range(len(s)):
+#             if s[i] != " ":
+#                 ans+= s[i]
+#                 if i+1 != len(s) and  s[i+1] == " ":
+#                     print(i)
+#                     res.append(ans)
+#                     ans = ""
+#                 elif i == len(s)-1:
+#                     res.append(ans)
+#         return res
 
-print(solve("   fly me   to   the moon  "))
-print(solve("Hello World"))
+# print(solve("   fly me   to   the moon  "))
+# print(solve("Hello World"))
+
+
+# def solve(nums1: list[str], nums2: list[str]) -> list[str]:
+#     for i in range(len(nums1)):
+#         nums1[i] = nums1[i].strip().lower().replace(" ", "")
+#     for i in range(len(nums2)):
+#         nums2[i] = nums2[i].strip().lower().replace(" ", "")
+#     final = []
+#     for i in range(len(nums2)):
+#         if nums2[i] in nums1:
+#             final.append(nums2[i])
+#     print(final)
+#     print(len(final))
+
+
+# solve(
+#     [
+#         "Electron",
+#         "webpack",
+#         "stdlib",
+#         "Neutralinojs",
+#         "rocket.chat",
+#         "JSON Schema",
+#         "Nightwatch.js",
+#         "AsyncAPI",
+#         "GRAME",
+#         "Joplin",
+#         "cBioPortal for Cancer Genomics",
+#         "Purr Data",
+#         "Jenkins",
+#         "AOSSIE",
+#         "OpenRefine",
+#         "Jitsi",
+#         "Project Mesa",
+#         "52°North Spatial Information Research GmbH",
+#         "freifunk",
+#         "Ceph",
+#         "City of Boston",
+#         "CircuitVerse.org",
+#         "MIT App Inventor",
+#         "Apertium",
+#         "INCF",
+#         "Open Chemistry",
+#         "International Catrobat Association",
+#         "Internet Archive",
+#         "Learning Equality",
+#         "Mixxx",
+#         "Accord Project",
+#         "OpenELIS Global",
+#         "OpenStreetMap",
+#         "Drupal Association",
+#         "Wikimedia Foundation",
+#         "Python Software Foundation",
+#         "Plone Foundation",
+#         "Uramaki LAB",
+#         "PostgreSQL",
+#         "MariaDB",
+#         "Polypheny",
+#         "Open Technologies Alliance - GFOSS",
+#         "FOSSASIA",
+#         "Creative Commons",
+#         "R project for statistical computing",
+#         "National Resource for Network Biology (NRNB)",
+#         "Submitty",
+#         "OpenWISP",
+#         "Department of Biomedical Informatics, Emory University",
+#         "The Honeynet Project",
+#         "OWASP Foundation",
+#         "OSGeo (Open Source Geospatial Foundation)",
+#         "Data for the Common Good",
+#         "Zendalona",
+#         "OpenMRS",
+#         "caMicroscope",
+#         "IOOS",
+#         "Internet Health Report",
+#         "Chromium",
+#         "DBpedia",
+#         "AboutCode",
+#         "Wagtail",
+#         "openSUSE Project",
+#         "Sugar Labs",
+#         "BRL-CAD",
+#         "LabLua",
+#         "API Dash",
+#         "Open HealthCare Network",
+#         "omegaUp",
+#         "Kubeflow",
+#         "CVAT",
+#         "Graphite",
+#         "The Palisadoes Foundation",
+#         "Zulip",
+#         "Oppia Foundation",
+#         "Git",
+#         "The NetBSD Foundation",
+#         "Haskell.org",
+#         "JdeRobot",
+#         "The ENIGMA Team",
+#         "OpenCV",
+#         "Rizin",
+#         "FreeType",
+#         "gprMax",
+#         "The ns-3 Network Simulator Project",
+#         "Software and Computational Systems Lab at LMU Munich",
+#         "The JPF team",
+#     ],
+#     [
+#         "rocket.chat",
+#         "cBioPortal for Cancer Genomics",
+#         "GRAME",
+#         "Purr Data",
+#         "XWiki",
+#         "Processing Foundation",
+#         "Jenkins",
+#         "AOSSIE",
+#         "52°North Spatial Information Research GmbH",
+#         "AboutCode",
+#         "Apertium",
+#         "caMicroscope",
+#         "Ceph",
+#         "Chromium",
+#         "CircuitVerse.org",
+#         "Cockpit Project",
+#         "Creative Commons",
+#         "DBpedia",
+#         "Department of Biomedical Informatics, Emory University",
+#         "Drupal Association",
+#         "freifunk",
+#         "GitLab",
+#         "INCF",
+#         "International Catrobat Association",
+#         "Internet Archive",
+#         "Internet Health Report",
+#         "Learning Equality",
+#         "LibreHealth",
+#         "MariaDB",
+#         "Mathesar",
+#         "Mayor's Office of New Urban Mechanics",
+#         "MIT App Inventor",
+#         "Mixxx",
+#         "National Resource for Network Biology (NRNB)",
+#         "Open Chemistry",
+#         "Open Technologies Alliance - GFOSS",
+#         "OpenMRS",
+#         "OpenStreetMap",
+#         "OpenWISP",
+#         "OSGeo (Open Source Geospatial Foundation)",
+#         "OWASP Foundation",
+#         "Plone Foundation",
+#         "PostgreSQL",
+#         "Postman",
+#         "Python Software Foundation",
+#         "Qdrant",
+#         "R project for statistical computing",
+#         "Society for Arts and Technology (SAT)",
+#         "Submitty",
+#         "The Honeynet Project",
+#         "Wagtail",
+#         "Wikimedia Foundation",
+#         "openSUSE Project",
+#         "Sugar Labs",
+#         "BRL-CAD",
+#         "omegaUp",
+#         "Oppia Foundation",
+#         "The Palisadoes Foundation",
+#         "Zulip",
+#         "Git",
+#         "The NetBSD Foundation",
+#         "JdeRobot",
+#         "The ENIGMA Team",
+#         "OpenCV",
+#         "Rizin",
+#         "FreeType",
+#         "gprMax",
+#         "The ns-3 Network Simulator Project",
+#         "Software and Computational Systems Lab at LMU Munich",
+#         "The JPF team",
+#     ],
+# )

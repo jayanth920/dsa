@@ -12,10 +12,6 @@ def solve(arr, k):
         return dist[k-1]
     else:
         return ""
-        
-        
-    
-    
     
     
     
