@@ -8,16 +8,16 @@
 #     return False
 
 
-# def solve(nums):
-#     reachmaxxing = len(nums)-1
-#     for i in range(len(nums)-2,-1,-1):
-#         if i+nums[i] >= reachmaxxing:
-#             reachmaxxing = min(reachmaxxing, i-nums[i])
-#             if reachmaxxing <= 0:
-#                 return True
-#     return False
+def solve(nums):
+    reachmaxxing = len(nums) - 1
+    for i in range(len(nums) - 2, -1, -1):
+        if i + nums[i] >= reachmaxxing:
+            reachmaxxing = min(reachmaxxing, i - nums[i])
+        if reachmaxxing <= 0:
+            return True
+    return False
 
-# print(solve([2,3,1,1,4]))
+print(solve([2,3,1,1,4]))
 
 # def findPlatform(arrival, departure):
 #     n = len(arrival)
@@ -292,3 +292,4 @@
 #         "The JPF team",
 #     ],
 # )
+

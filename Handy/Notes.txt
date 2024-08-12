@@ -9,5 +9,5 @@ Kadanes algo
 radix sort
 bucket sort
 Boyer-Moore vote algorithm
-
+Fisher-Yates algorithm
 
