@@ -13,7 +13,7 @@ def solve(target,arr):
     # return True
     
     # Using shorthand
-    return target == arr
+    return sorted(target) == sorted(arr)
 
 print(solve([1,2,3,4],[2,4,1,3]))
 print(solve([7],[7]))
