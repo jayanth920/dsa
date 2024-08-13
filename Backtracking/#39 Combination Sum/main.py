@@ -1,5 +1,30 @@
 # Method 1 (where we keep adding to the sum)
 def combinationSum(candidates, target):
+    res, sol = [], []
+    nums = candidates
+    n = len(nums)
+
+    def backtrack(i, cur_sum):
+        if cur_sum == target:
+            res.append(sol[:])
+            return
+
+        if cur_sum > target or i == n:
+            return
+
+        # Skip the current candidate
+        backtrack(i + 1, cur_sum)
+        
+        # Include the current candidate
+        sol.append(nums[i])
+        backtrack(i, cur_sum + nums[i])
+        sol.pop()
+
+    backtrack(0, 0)
+    return res
+
+# Method 2 (where we keep adding to the sum)
+def combinationSum(candidates, target):
         res = []
         n = len(candidates)
         
@@ -22,7 +47,7 @@ def combinationSum(candidates, target):
         return res
 
 
-# Method 2 (where we keep subtracting from the target till 0)
+# Method 3 (where we keep subtracting from the target till 0)
 def combinationSum(candidates, target):
     res = []
     n = len(candidates)
