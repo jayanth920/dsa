@@ -8,16 +8,16 @@
 #     return False
 
 
-def solve(nums):
-    reachmaxxing = len(nums) - 1
-    for i in range(len(nums) - 2, -1, -1):
-        if i + nums[i] >= reachmaxxing:
-            reachmaxxing = min(reachmaxxing, i - nums[i])
-        if reachmaxxing <= 0:
-            return True
-    return False
+# def solve(nums):
+#     reachmaxxing = len(nums) - 1
+#     for i in range(len(nums) - 2, -1, -1):
+#         if i + nums[i] >= reachmaxxing:
+#             reachmaxxing = min(reachmaxxing, i - nums[i])
+#         if reachmaxxing <= 0:
+#             return True
+#     return False
 
-print(solve([2,3,1,1,4]))
+# print(solve([2,3,1,1,4]))
 
 # def findPlatform(arrival, departure):
 #     n = len(arrival)
@@ -292,4 +292,87 @@ print(solve([2,3,1,1,4]))
 #         "The JPF team",
 #     ],
 # )
+
+
+
+
+# Random Number Guessing Game --------------------------------------
+
+
+# import random
+
+# top = input("ENTER A DIGIT !!\n")
+# if top.isdigit():
+#     top = int(top)
+#     if top <= 0:
+#         print("PLEASE ENTER A VALID NUMBER NEXT TIME !\n")
+# else:
+#     print("ENTER A VALID NUMBER NEXT TIME !!\n")
+
+# ans = random.randint(1,top)
+
+# answered = False
+
+# while answered == False:
+#     guess = input("GUESS A NUMBER !!\n")
+#     if guess.isdigit():
+#         guess = int(guess)
+#         if guess <= 0:
+#             print("PLEASE ENTER A VALID NUMBER NEXT TIME !\n")
+#     if guess == ans:
+#         print("YOU GUESSED IT CONGRATS !!!!!!!!!!!!!!!!!!!")
+#         answered = True
+#     elif guess > ans:
+#         print("AAH GO LOWER...")
+#     elif guess < ans:
+#         print("AAH GO MORE...")
+#     else:
+#         print("YOU GOT IT WRONG MY BRO.....TRY AGAIN !!\n")
+        
+    
+    
+# Rock, Paper, Scissors --------------------------------------
+
+# import random
+# # Outcomes
+# outcomes = ["rock", "paper", "scissors"]
+# # Computers answer
+
+# player = ""
+# cscore = 0
+# pscore = 0
+
+# while player != "q":
+#     player = str(input("Type Rock/Paper/Scissors to play or press Q to quit !\n"))
+#     player = player.lower()
+#     idx = random.randint(0,2)
+#     comp = outcomes[idx]
+    
+#     if(comp == player):
+#         print("TIE")
+#     elif comp == "rock" and player == "paper":
+#         print(f"Player Wins!, player chose {player}, comp chose {comp}")
+#         cscore +=1
+#         print(f"Player Score: {pscore}, Computer's Score: {cscore}")
+#     elif comp == "paper" and player == "rock":
+#         print(f"Computer Wins!, comp chose {comp}, player chose {player}")
+#         pscore +=1
+#         print(f"Player Score: {pscore}, Computer's Score: {cscore}")
+#     elif comp == "paper" and player == "scissors":
+#         print(f"Player Wins!, player chose {player}, comp chose {comp}")
+#         cscore +=1
+#         print(f"Player Score: {pscore}, Computer's Score: {cscore}")
+#     elif comp == "scissors" and player == "paper":
+#         print(f"Computer Wins!, comp chose {comp}, player chose {player}")
+#         pscore +=1
+#         print(f"Player Score: {pscore}, Computer's Score: {cscore}")
+#     elif comp == "rock" and player == "paper":
+#         print(f"Player Wins!, player chose {player}, comp chose {comp}")
+#         cscore +=1
+#         print(f"Player Score: {pscore}, Computer's Score: {cscore}")
+#     elif comp == "paper" and player == "rock":
+#         print(f"Computer Wins!, comp chose {comp}, player chose {player}")
+#         pscore +=1
+#         print(f"Player Score: {pscore}, Computer's Score: {cscore}")
+        
 

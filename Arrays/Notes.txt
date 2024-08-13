@@ -1,2 +1,10 @@
 1. Can exchange array elements using this for Python matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]. For JS [matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]]
 2. The % n in the expression nums[(i + 1) % n] is used to wrap around the end of the array to the beginning, effectively handling the case where i + 1 would go out of bounds.
+3. Use this to remove duplicates, but make sure its SORTED first.       
+\\------CODE------ \\
+# Skip duplicates
+        if i > 0 and nums[i] == nums[i - 1]:
+            continue
+\\------CODE------- \\
+
+4.
