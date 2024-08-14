@@ -329,50 +329,38 @@
 #     else:
 #         print("YOU GOT IT WRONG MY BRO.....TRY AGAIN !!\n")
         
-    
-    
-# Rock, Paper, Scissors --------------------------------------
-
 # import random
+
 # # Outcomes
 # outcomes = ["rock", "paper", "scissors"]
-# # Computers answer
 
-# player = ""
+# # Initial scores
 # cscore = 0
 # pscore = 0
 
-# while player != "q":
-#     player = str(input("Type Rock/Paper/Scissors to play or press Q to quit !\n"))
-#     player = player.lower()
-#     idx = random.randint(0,2)
-#     comp = outcomes[idx]
+# while True:
+#     player = input("Type Rock/Paper/Scissors to play or press Q to quit!\n").lower()
     
-#     if(comp == player):
-#         print("TIE")
-#     elif comp == "rock" and player == "paper":
-#         print(f"Player Wins!, player chose {player}, comp chose {comp}")
-#         cscore +=1
-#         print(f"Player Score: {pscore}, Computer's Score: {cscore}")
-#     elif comp == "paper" and player == "rock":
-#         print(f"Computer Wins!, comp chose {comp}, player chose {player}")
-#         pscore +=1
-#         print(f"Player Score: {pscore}, Computer's Score: {cscore}")
-#     elif comp == "paper" and player == "scissors":
-#         print(f"Player Wins!, player chose {player}, comp chose {comp}")
-#         cscore +=1
-#         print(f"Player Score: {pscore}, Computer's Score: {cscore}")
-#     elif comp == "scissors" and player == "paper":
-#         print(f"Computer Wins!, comp chose {comp}, player chose {player}")
-#         pscore +=1
-#         print(f"Player Score: {pscore}, Computer's Score: {cscore}")
-#     elif comp == "rock" and player == "paper":
-#         print(f"Player Wins!, player chose {player}, comp chose {comp}")
-#         cscore +=1
-#         print(f"Player Score: {pscore}, Computer's Score: {cscore}")
-#     elif comp == "paper" and player == "rock":
-#         print(f"Computer Wins!, comp chose {comp}, player chose {player}")
-#         pscore +=1
-#         print(f"Player Score: {pscore}, Computer's Score: {cscore}")
-        
+#     if player == "q":
+#         break
+#     if player not in outcomes:
+#         print("Invalid input, please try again.")
+#         continue
+    
+#     comp = random.choice(outcomes)
+#     print(f"Computer chose {comp}")
 
+#     if comp == player:
+#         print("TIE")
+#     elif (comp == "rock" and player == "scissors") or \
+#          (comp == "scissors" and player == "paper") or \
+#          (comp == "paper" and player == "rock"):
+#         print(f"Computer Wins! {comp} beats {player}")
+#         cscore += 1
+#     else:
+#         print(f"Player Wins! {player} beats {comp}")
+#         pscore += 1
+
+#     print(f"Player Score: {pscore}, Computer's Score: {cscore}")
+
+# print("Thanks for playing!")
