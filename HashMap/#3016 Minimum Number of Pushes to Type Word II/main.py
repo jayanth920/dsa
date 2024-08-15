@@ -1,5 +1,5 @@
 # def solve(word):
-    # METHOD 1 - GOOD SOLUTION - whout the tweak
+    # METHOD 1 - GOOD SOLUTION - without the tweak
     # my = {}
     # for i in range(len(word)):
     #     if word[i] in my:
@@ -22,7 +22,7 @@
     #         multiplier += 1
     # return sum
     
-# METHOD 2 - Also an GREAT soln but with a small tweak, mentioned ibn the comments below
+# METHOD 2 - Also an GREAT soln but with a small tweak, mentioned in the comments below
 def solve(word):
     my = {}
     for i in range(len(word)):
