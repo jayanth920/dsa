@@ -9,6 +9,14 @@ def solve(strs):
         my[tempStr].append(item)
         
     return my.values()
+        # my = {}
+        # for i in strs:
+        #     temp = ''.join(sorted(i))
+        #     if temp in my:
+        #         my[temp].append(i)
+        #     else:
+        #         my[temp] = [i]
+        # return my.values()
 
 
 print(solve(["eat", "tea", "tan", "ate", "nat", "bat"]))
