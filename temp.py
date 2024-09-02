@@ -364,3 +364,20 @@
 #     print(f"Player Score: {pscore}, Computer's Score: {cscore}")
 
 # print("Thanks for playing!")
+
+
+
+
+
+def solve(n):
+    mem = set()
+    while n!= 1:
+        temp = str(n)
+        n = sum([int(temp[i])*int(temp[i]) for i in range(len(temp))])
+        if n in mem:
+            return False
+        else:
+            mem.add(n)
+    return True
+
+print(solve(2))
