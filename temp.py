@@ -369,15 +369,22 @@
 
 
 
-def solve(n):
-    mem = set()
-    while n!= 1:
-        temp = str(n)
-        n = sum([int(temp[i])*int(temp[i]) for i in range(len(temp))])
-        if n in mem:
-            return False
-        else:
-            mem.add(n)
-    return True
 
-print(solve(2))
+
+
+
+def happy(n):
+    num = str(n)
+    mem = set()
+    temp = 0
+    while num != "1":
+        for i in range(len(num)):
+            temp += (int(num[i])**2)
+        num = str(temp)
+        temp = 0
+        if num in mem:
+            return False
+        mem.add(num)
+    return True
+    
+print(happy(19))
