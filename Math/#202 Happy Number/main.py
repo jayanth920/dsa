@@ -14,6 +14,32 @@ def solve(n):
             mem.add(num)
     return True
 
+
+        # ANOTHER WAY WITHOUT USING THE STR CONVERSION, WE USE % and // here
+        # seen = set()
+        
+        # while n != 1:
+        #     current = n
+        #     total_sum = 0
+            
+        #     # Extract each digit and calculate the sum of squares
+        #     while current > 0:
+        #         digit = current % 10  # Extract the last digit
+        #         total_sum += digit ** 2  # Square it and add to the sum
+        #         current //= 10  # Remove the last digit
+            
+        #     # Check if we have seen this sum before
+        #     if total_sum in seen:
+        #         return False
+            
+        #     seen.add(total_sum)
+        #     n = total_sum
+        
+        # return True
+        
+        
+        
+
     # IMPROVED VERSION BY PY CODE - BUT RUNS SLOWER LOL
     # cache = set()
     # while n!= 1:
