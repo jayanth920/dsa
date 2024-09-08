@@ -47,6 +47,13 @@ def mergesort(nums):
     right = nums[mid:]
         
     return merge(mergesort(left),mergesort(right))
+    # if len(nums) <= 1:
+    #     return nums
+    # l = 0
+    # r = len(nums)-1
+    # # mid = len(nums)//2
+    # mid = l + (r-l)//2
+    # return merge(mergeSort(nums[:mid+1]), mergeSort(nums[mid+1:]))
         
 def merge(left,right):
     res = []

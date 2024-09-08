@@ -294,8 +294,6 @@
 # )
 
 
-
-
 # Random Number Guessing Game --------------------------------------
 
 
@@ -328,7 +326,7 @@
 #         print("AAH GO MORE...")
 #     else:
 #         print("YOU GOT IT WRONG MY BRO.....TRY AGAIN !!\n")
-        
+
 # import random
 
 # # Outcomes
@@ -340,13 +338,13 @@
 
 # while True:
 #     player = input("Type Rock/Paper/Scissors to play or press Q to quit!\n").lower()
-    
+
 #     if player == "q":
 #         break
 #     if player not in outcomes:
 #         print("Invalid input, please try again.")
 #         continue
-    
+
 #     comp = random.choice(outcomes)
 #     print(f"Computer chose {comp}")
 
@@ -366,25 +364,78 @@
 # print("Thanks for playing!")
 
 
+# from typing import List
+
+# def findSubsequences(nums, target):
+#     # To store the resulting subsequences
+#     res = [0]
+
+#     # Helper function to recursively find subsequences
+#     def picker(idx, ds, total):
+#         # Check if the sum matches the target; if so, append to results
+#         if total == target:
+#             res[0] += 1
+#             return
+
+#         # Base condition: if we've checked all elements, stop recursion
+#         if idx == len(nums):
+#             return
+
+#         # Include the current element in the subsequence
+#         ds.append(nums[idx])
+#         picker(idx + 1, ds, total + nums[idx])  # Recursive call with element included
+
+#         # Exclude the current element from the subsequence
+#         ds.pop()
+#         picker(idx + 1, ds, total)  # Recursive call without the element
+
+#     # Start the recursive process from index 0
+#     picker(0, [], 0)
+
+#     return res
+
+# # Test cases to run
+# if __name__ == "__main__":
+#     test_cases = [
+#         ([1, 2, 1], 2),          # Should return [[1, 1], [2]]
+#         ([1, 2, 3], 3),          # Should return [[1, 2], [3]]
+#         ([1, 2, 1, 2], 4),       # Should return [[1, 2, 1], [2, 2]]
+#         ([2, 4, 6], 6),          # Should return [[2, 4], [6]]
+#         ([5, 1, 1, 1], 2)        # Should return [[1, 1], [1, 1], [1, 1]]
+#     ]
+
+#     for nums, target in test_cases:
+#         print(f"Input: nums = {nums}, target = {target}")
+#         result = findSubsequences(nums, target)
+#         print(f"Output: {result}\n")
+
+import math
 
 
-
-
-
-
-
-def happy(n):
-    num = str(n)
-    mem = set()
-    temp = 0
-    while num != "1":
-        for i in range(len(num)):
-            temp += (int(num[i])**2)
-        num = str(temp)
-        temp = 0
-        if num in mem:
-            return False
-        mem.add(num)
-    return True
+def solve(arr, k):
+    n = len(arr)
+    part_length = n // k  # Minimum size of each part
+    extra_parts = n % k   # Number of parts that will have one extra element
     
-print(happy(19))
+    result = []
+    index = 0
+    
+    # Split the array into k parts
+    for i in range(k):
+        # Calculate the size of the current part
+        current_part_size = part_length + (1 if i < extra_parts else 0)
+        
+        # Take the elements for the current part
+        current_part = arr[index:index + current_part_size]
+        result.append(current_part)
+        
+        # Move the index forward by the size of the current part
+        index += current_part_size
+    
+    return result
+
+
+print(solve([1, 2, 3, 4, 5, 6, 7], 5))
+
+# 8,5 ->
+# 9, 2
