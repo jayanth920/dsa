@@ -1,0 +1,4 @@
+1. Always think about prev, curr pointer.
+2. Think about walker runner or hare tortoise method, which is Floyd's cycle Detection Algo. Ex in #141.
+3. For one pass, think about 2 pointer technique, 2 ptr could be walker runner also.
+4. use sets its lookup is O(1) on avg. Max hash collisions it would be O(n)

@@ -1,3 +1,27 @@
 1. In prime number problems, 1 to sq(N), for loop for 1 to sq(N)+1(exclusive),if N divisible by i meaning  N%i is 0, then N//i is also a divisor.
 
-2.
+
+2. Finding GCD or HCF.  (the common prime factors of both multiplied is hcf.) Link for better understanding of hcf or gcd. "https://byjus.com/maths/hcf/"
+"    def gcd(x, y):
+        while y != 0:
+            (x, y) = (y, x % y)
+        return x"
+
+
+
+3. Finding LCM. Code is below. Formula using GCD is: |x * y| // gcd(x, y). 
+" # CODE 1 - USING GCD
+    def lcm(x, y):
+        return abs(x * y) // gcd(x, y)"
+
+"# CODE 2 - WITHOUT GCD
+    def lcm(x, y):
+        # Start from the maximum of x and y
+        lcm = max(x, y)
+
+        # Increment lcm by itself until it is divisible by both x and y
+        while lcm % x != 0 or lcm % y != 0:
+            lcm += max(x, y)
+
+        return lcm"
+
