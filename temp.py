@@ -409,33 +409,66 @@
 #         result = findSubsequences(nums, target)
 #         print(f"Output: {result}\n")
 
-import math
+# import math
 
 
-def solve(arr, k):
-    n = len(arr)
-    part_length = n // k  # Minimum size of each part
-    extra_parts = n % k   # Number of parts that will have one extra element
-    
-    result = []
-    index = 0
-    
-    # Split the array into k parts
-    for i in range(k):
-        # Calculate the size of the current part
-        current_part_size = part_length + (1 if i < extra_parts else 0)
-        
-        # Take the elements for the current part
-        current_part = arr[index:index + current_part_size]
-        result.append(current_part)
-        
-        # Move the index forward by the size of the current part
-        index += current_part_size
-    
-    return result
+# def solve(arr, k):
+#     n = len(arr)
+#     part_length = n // k  # Minimum size of each part
+#     extra_parts = n % k   # Number of parts that will have one extra element
+
+#     result = []
+#     index = 0
+
+#     # Split the array into k parts
+#     for i in range(k):
+#         # Calculate the size of the current part
+#         current_part_size = part_length + (1 if i < extra_parts else 0)
+
+#         # Take the elements for the current part
+#         current_part = arr[index:index + current_part_size]
+#         result.append(current_part)
+
+#         # Move the index forward by the size of the current part
+#         index += current_part_size
+
+#     return result
 
 
-print(solve([1, 2, 3, 4, 5, 6, 7], 5))
+# print(solve([1, 2, 3, 4, 5, 6, 7], 5))
 
-# 8,5 ->
-# 9, 2
+
+# def solve(s):
+#     cons = ["a", "e", "i", "o", "u"]
+#     my = {i: 0 for i in cons}
+
+#     # Checker function to see if all vowel counts are even
+#     def checker():
+#         ans = 0
+#         for k in cons:
+#             if my[k] % 2 == 0:
+#                 ans += 1
+#         return ans == 5  # True if all vowel counts are even
+
+#     length = 0
+#     n = len(s)
+
+#     for i in range(n):
+#         # Reset counts for each new starting point
+#         my = {i: 0 for i in cons}  
+#         for j in range(i, n):
+#             if s[j] in my:
+#                 my[s[j]] += 1  # Update vowel count
+#             m = checker()
+#             if m:
+#                 length = max(length, j - i + 1)  # Update max length if all counts are even
+#             print("m: ", m, "temp: ", s[i:j+1], "length: ", length)
+
+#     return length
+
+
+# print(solve("eleetminicoworoep"))
+# # print(solve("leetcodeisgreat"))
+# # print(solve("bcbcbc"))
+
+
