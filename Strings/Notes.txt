@@ -1,0 +1,4 @@
+1. Knuth-Morris-Pratt - In short KMP algorithm . Problem #214
+2. Z algorith #214
+3. Rolling Hash #214
+4. Rabin Karp
