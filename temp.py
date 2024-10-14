@@ -473,3 +473,18 @@
 
 
 
+import math
+
+
+def solve(nums: list[int],k):
+    score = 0
+    while k!=0:
+        maxNum = max(nums)
+        idx = nums.index(maxNum)
+        score += maxNum
+        nums[idx] = math.ceil(nums[idx]/3)
+        k -= 1
+    return score 
+    
+print(solve([10,10,10,10,10],5))
+print(solve([1,10,3,3,3], 3))
