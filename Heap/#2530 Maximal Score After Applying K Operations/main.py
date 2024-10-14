@@ -12,3 +12,4 @@ def solve(nums,k):
         return score
     
 print(solve([1,10,3,3,3],3))
+print(solve([10,10,10,10,10],5))
