@@ -473,18 +473,39 @@
 
 
 
-import math
+# import math
 
 
-def solve(nums: list[int],k):
-    score = 0
-    while k!=0:
-        maxNum = max(nums)
-        idx = nums.index(maxNum)
-        score += maxNum
-        nums[idx] = math.ceil(nums[idx]/3)
-        k -= 1
-    return score 
+# def solve(nums: list[int],k):
+#     score = 0
+#     while k!=0:
+#         maxNum = max(nums)
+#         idx = nums.index(maxNum)
+#         score += maxNum
+#         nums[idx] = math.ceil(nums[idx]/3)
+#         k -= 1
+#     return score 
     
-print(solve([10,10,10,10,10],5))
-print(solve([1,10,3,3,3], 3))
+# print(solve([10,10,10,10,10],5))
+# print(solve([1,10,3,3,3], 3))
+
+# from collections import Counter
+# def solve(word):
+#     comp = ""
+#     L,R = 0,1
+#     while L<len(word):
+#         if(word[L] == word[R]) and (R-L+1 < 10):
+#             while(word[L] == word[R]) and (R-L+1 < 10):
+#                 R += 1
+#         else:
+#             comp += str(R-L) + word[L]
+#             L = R
+#             if R < len(word)-1:
+#                 R += 1
+#     return comp
+            
+    
+    
+# print(solve("abcde"))
+# print(solve("aaaaaaaaaabb"))
+
