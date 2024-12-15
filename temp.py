@@ -509,3 +509,18 @@
 # print(solve("abcde"))
 # print(solve("aaaaaaaaaabb"))
 
+
+# file handling
+
+# 2) without using with statement
+
+
+file = open("temp.txt","r")
+try:
+    res = file.read()
+    print("READABLE: ",res)
+finally:
+    file.close()
+
+
+

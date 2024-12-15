@@ -27,7 +27,6 @@ function runner(nums){
   
     return !(inc && dec)
   }
-
   
   console.log(runner([1, 2, 2, 3])); // true (non-decreasing)
   console.log(runner([6, 5, 4, 4])); // true (non-increasing)
